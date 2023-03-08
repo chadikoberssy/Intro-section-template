@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="./dist/styles.css">
+
+  <title>Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper shadow">
+    <div class="overlay"></div>
+    <section class="navigation-bar">
+      <nav class="navbar-custom navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="./images/logo.svg" alt="">
+          </a>
+          <a class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span> </span>
+            <span> </span>
+            <span> </span>
+          </a>
+  
+          <div class="navbar-items collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Features <svg class="caret" width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg>
+                </a>
+                <div class="dropdown-menu shadow" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#"><img src="./images/icon-todo.svg" alt="">&nbsp;&nbsp;&nbsp;ToDo List</a>
+                  <a class="dropdown-item" href="#"><img src="./images/icon-calendar.svg" alt="">&nbsp;&nbsp;&nbsp;Calendar</a>
+                  <a class="dropdown-item" href="#"><img src="./images/icon-reminders.svg" alt="">&nbsp;&nbsp;&nbsp;Reminders</a>
+                  <a class="dropdown-item" href="#"><img src="./images/icon-planning.svg" alt="">&nbsp;&nbsp;&nbsp;Planing</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Company <svg class="caret" width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg>
+                </a>
+                <div class="dropdown-menu shadow" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">History</a>
+                  <a class="dropdown-item" href="#">Our Team</a>
+                  <a class="dropdown-item" href="#">Blog</a>
+                </div>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Careers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              
+              
+            </ul>
+            <div class="login-top ms-auto">
+              <button class="login-button btn my-2 my-sm-0" type="submit">Login</button>
+              <button class="register-button btn outline my-2 my-sm-0" type="submit">Register</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <section class="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-lg-6 hero-image-part-mobile">
+            <img src="./images/image-hero-mobile.png" alt="hero-mobile" class="img-fluid">
+          </div>
+          <div class="col-xs-12 col-lg-6 hero-text-part">
+            <div class="row">
+              <div class="col-12">
+                <h1>Make remote work</h1>
+                <p>
+                  Get your team in sync, no matter your location. Streamline processes,
+                  create team rituals, and watch productivity soar.
+                </p>
+                <a href="http://" class="btn btn-primary"> Learn more</a>
+              </div>
+              <div class="col-xs-12 client-logos">
+                <img src="./images/client-databiz.svg" alt="">
+                <img src="./images/client-audiophile.svg" alt="">
+                <img src="./images/client-meet.svg" alt="">
+                <img src="./images/client-maker.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 hero-image-part-desktop">
+            <img src="./images/image-hero-desktop.png" alt="hero-desktop" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Chadi Koberssy</a>.
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./App/js/script.js"></script>
+</body>
+
+</html>

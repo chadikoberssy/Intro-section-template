@@ -1,0 +1,100 @@
+@import "./mixins";
+
+.hero{
+
+    .container{
+        @include breakpoint-down(small){
+            padding: 0;
+        }
+    }
+    //padding: 0 118px 100px 158px;
+    padding-bottom:6.25rem;
+    margin-bottom: 100px;
+
+    .hero-text-part{
+        padding-top: 150px;
+        padding-right: 40px;
+        //padding-left: 7.875rem;
+        padding-left: 7rem;
+
+        @include breakpoint-down(small){
+            padding: 50px 30px 0 30px;
+            text-align: center;
+        }
+        
+        h1{
+            font-size: 5rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 48px;
+
+            @include breakpoint-down(small){
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+        }
+
+        p{
+            color: $medium-gray;
+            padding-right: 100px;
+            margin-bottom: 50px;
+            font-size: 1.15rem;
+
+            @include breakpoint-down(small){
+                font-size: 1rem;
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+        }
+
+        a{
+            text-decoration: none;
+            color: $almost-white;
+            background-color: $almost-black;
+            border: 1px solid $almost-black;
+            padding: 15px 30px;
+            border-radius: 15px;
+            font-weight: 700;
+
+            &:hover{
+                color: $almost-black;
+                background-color: $almost-white;
+                border-color: $almost-black;
+            }
+        }
+
+        .client-logos{
+            padding-top: 80px;
+
+            @include breakpoint-down(small){
+                padding: 30px 0 0 0;
+
+            }
+            img{
+                margin-right: 25px;
+                @include breakpoint-down(small){
+                    width: 18%;
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+
+    .hero-image-part-desktop{
+        padding-top: 45px;
+        padding-left: 110px;
+        padding-right: 7.375rem;
+
+        @include breakpoint-down(small){
+            display: none;
+        }
+    }
+
+    .hero-image-part-mobile{
+        display: none;
+
+        @include breakpoint-down(small){
+            display: block;
+        }
+    }
+}

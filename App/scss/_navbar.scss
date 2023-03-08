@@ -1,0 +1,191 @@
+@import "./mixins";
+
+.navigation-bar {
+  .navbar-custom {
+    background-color: transparent;
+  }
+  .navbar {
+    padding: 20px 0;
+
+    //color: $medium-gray;
+
+    .navbar-items {
+      padding: 0 0 0 30px;
+
+      @include breakpoint-down(medium) {
+        padding: 60px 20px 20px 30px;
+      }
+
+      .nav-item {
+        padding-right: 25px;
+
+        .nav-link:hover {
+          color: $almost-black;
+          transition: all ease-in-out 200ms;
+
+          .caret {
+            path {
+              stroke: $almost-black;
+              transition: all ease-in-out 200ms;
+            }
+          }
+        }
+
+        .nav-link {
+          color: $medium-gray;
+          font-size: 0.9rem;
+        }
+
+        .dropdown-menu {
+          border: none;
+          .dropdown-item {
+            color: $medium-gray;
+            font-size: 0.9rem;
+          }
+        }
+
+        .dropdown-toggle::after {
+          display: none;
+        }
+
+        .dropdown-toggle[aria-expanded="true"] {
+          color: $almost-black;
+          .caret {
+            transform: rotate(180deg);
+
+            path {
+              stroke: $almost-black;
+            }
+          }
+        }
+        /*for animation*/
+        .dropdown-toggle {
+          .caret {
+            transition: all ease-in-out 200ms;
+          }
+        }
+      }
+
+      .login-top {
+        button {
+          font-size: 0.9rem;
+          width: 100px;
+          height: 40px;
+          border-radius: 10px;
+          color: $medium-gray;
+
+          @include breakpoint-down(small) {
+            width: 100%;
+            display: block;
+          }
+
+          &:hover {
+            color: $almost-black;
+          }
+        }
+
+        .register-button {
+          border: 1px solid $medium-gray;
+
+          &:hover {
+            border: 1px solid $almost-black;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-down(medium) {
+  .navbar-toggler {
+    z-index: 2;
+    border: none;
+    color: $almost-black;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  /* Define the shape and color of the hamburger lines */
+  .navbar-toggler span {
+    display: block;
+    background-color: $almost-black;
+    height: 2px;
+    width: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    left: 0;
+    opacity: 1;
+    transition: all 0.35s ease-out;
+    transform-origin: center left;
+  }
+
+  /* top line needs a little padding */
+  .navbar-toggler span:nth-child(1) {
+    margin-top: 0.3em;
+  }
+
+  /**
+ * Animate collapse into X.
+ */
+
+  /* top line rotates 45 degrees clockwise and moves up and in a bit to close the center of the X in the center of the button */
+  .navbar-toggler:not(.collapsed) span:nth-child(1) {
+    transform: translate(15%, -150%) rotate(45deg);
+  }
+  /* center line goes transparent */
+  .navbar-toggler:not(.collapsed) span:nth-child(2) {
+    opacity: 0;
+  }
+  /* bottom line rotates 45 degrees counter clockwise, in, and down a bit to close the center of the X in the center of the button  */
+  .navbar-toggler:not(.collapsed) span:nth-child(3) {
+    transform: translate(15%, 150%) rotate(-45deg);
+  }
+
+  /**
+ * Animate collapse open into hamburger menu
+ */
+
+  /* top line moves back to initial position and rotates back to 0 degrees */
+  .navbar-toggler span:nth-child(1) {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+  /* middle line goes back to regular color and opacity */
+  .navbar-toggler span:nth-child(2) {
+    opacity: 1;
+  }
+  /* bottom line goes back to initial position and rotates back to 0 degrees */
+  .navbar-toggler span:nth-child(3) {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 70px;
+    width: 70%;
+    height: 100%;
+    background-color: $almost-white;
+    z-index: 0;
+  }
+
+  .navbar-collapse.collapsing {
+    right: -75%;
+    transition: height 0s ease;
+  }
+
+  .navbar-collapse.show {
+    right: 0;
+    transition: right 300ms ease-in-out;
+  }
+
+  .navbar-toggler.collapsed ~ .navbar-collapse {
+    transition: right 500ms ease-in-out;
+  }
+}

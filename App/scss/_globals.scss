@@ -1,0 +1,34 @@
+@import "./mixins";
+
+html,body{
+    overflow-x: hidden;
+}
+
+body{
+    font-family: 'Epilogue', sans-serif;
+    font-size: $body-font-size;
+    background-color: $almost-white;
+}
+
+.noscroll {
+    overflow: hidden;
+    position: fixed;
+}
+
+.container{
+    max-width: 1375px !important;
+}
+
+.overlay {
+    width: 100%;
+    height: 150%;
+    background-color: $almost-black;
+    opacity: 0;
+    position: absolute;
+    transition: all ease-in-out 300ms;
+    display: none;
+
+    @include breakpoint-down(medium) {
+        display: block;
+    }
+}
